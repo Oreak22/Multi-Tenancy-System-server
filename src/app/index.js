@@ -4,8 +4,8 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const authenticationRouter = require("../routers/authentication.router");
-const dashboardRouter = require("../routers/user.router");
+const authenticationRouter = require("../app/routers/authentication.router");
+const dashboardRouter = require("../app/routers/user.router");
 
 dotenv.config();
 // database connection
