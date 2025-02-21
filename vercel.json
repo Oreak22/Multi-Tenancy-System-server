@@ -1,0 +1,11 @@
+{
+	"version": 2,
+	"builds": [{ "src": "src/app/middlewares/index.js", "use": "@vercel/node" }],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "src/app/middlewares/index.js"
+		}
+	],
+	"buildCommand": "prisma generate"
+}

@@ -5,7 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const authenticationRouter = require("../routers/authentication.router");
-const dashboardRouter = require('../routers/user.router')
+const dashboardRouter = require("../routers/user.router");
 
 dotenv.config();
 // database connection
@@ -27,7 +27,10 @@ app.use(bodyParser.json());
 
 // routes
 app.use("/api", authenticationRouter);
-app.use("/user", dashboardRouter)
+app.use("/user", dashboardRouter);
+app.get("/", (req, res) => {
+	res.send("Hello from Vercel!");
+});
 
 // connection
 const PORT = process.env.PORT || 5000;
